@@ -4,43 +4,31 @@ namespace CourseApp
 {
     public class Program
     {
-        public static double MyFunction(double a, double b, double x)
+        public static void Problem(double a, double x_begin, double x_end, double x_delta)
         {
-            var y = (a * Math.Pow(x, 2)) + (b * x);
-            return y;
-        }
-
-        public static double[] TaskA(double a, double b, double xn, double xk, double dx)
-        {
-            return new double[0];
-        }
-
-        public static double[] TaskB(double a, double b, double[] x)
-        {
-            var y = new double[x.Length];
-            for (var i = 0; i < x.Length; i++)
+            double y;
+            for (double x = x_begin; x < x_end; x += x_delta)
             {
-                y[i] = MyFunction(a, b, x[i]);
+                y = Math.Pow(a, Math.Pow(x, 2) - 1) - Math.Log10(Math.Pow(x, 2) - 1) + Math.Pow(Math.Sqrt(Math.Pow(x, 2) - 1), 1 / 3);
+                Console.WriteLine(y + " ");
             }
+        }
 
-            return y;
+        public static void Problem2(double[] elements, double a)
+        {
+            Console.WriteLine("Second one.");
+            foreach (double x in elements)
+            {
+                double y = Math.Pow(a, Math.Pow(x, 2) - 1) - Math.Log10(Math.Pow(x, 2) - 1) + Math.Pow(Math.Sqrt(Math.Pow(x, 2) - 1), 1 / 3);
+                Console.WriteLine(y);
+            }
         }
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            const double a = 2.2;
-            const double b = 3.8;
-            var resSingle = MyFunction(a, b, 4);
-            Console.WriteLine(resSingle);
-            var x = new double[] { 1, 2, 3, 4, 5 };
-            var taskBRes = TaskB(a, b, x);
-            foreach (var item in taskBRes)
-            {
-                Console.WriteLine($"y = {item}");
-            }
-
-            Console.ReadLine();
+            double[] xx = { 1.28, 1.36, 2.47, 3.68, 4.56 };
+            CourseApp.Program.Problem(1.6, 1.2, 3.7, 0.5);
+            CourseApp.Program.Problem2(xx, 1.6);
         }
     }
 }
