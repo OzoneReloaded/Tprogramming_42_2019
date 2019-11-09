@@ -4,31 +4,54 @@ namespace CourseApp
 {
     public class Program
     {
-        public static void Problem(double a, double x_begin, double x_end, double x_delta)
+        public static double MyFunction(double a, double x)
         {
-            double y;
-            for (double x = x_begin; x < x_end; x += x_delta)
-            {
-                y = Math.Pow(a, Math.Pow(x, 2) - 1) - Math.Log10(Math.Pow(x, 2) - 1) + Math.Pow(Math.Sqrt(Math.Pow(x, 2) - 1), 1 / 3);
-                Console.WriteLine(y + " ");
-            }
+            var y = Math.Pow(a, Math.Pow(x, 2) - 1) - Math.Log10(Math.Pow(x, 2) - 1) + Math.Pow(Math.Sqrt(Math.Pow(x, 2) - 1), 1 / 3);
+            return y;
         }
 
-        public static void Problem2(double[] elements, double a)
+        public static double[] TaskA(double a, double xn, double xk, double dx)
+        {
+            int i = 0;
+            var y = new double[(int)((xk - xn) / dx)];
+            for (double x = xn; x < xk; x += dx)
+            {
+                y[i] = MyFunction(a, x);
+                i++;
+            }
+
+            return y;
+        }
+
+        public static double[] TaskB(double a, double[] x)
         {
             Console.WriteLine("Second one.");
             foreach (double x in elements)
             {
-                double y = Math.Pow(a, Math.Pow(x, 2) - 1) - Math.Log10(Math.Pow(x, 2) - 1) + Math.Pow(Math.Sqrt(Math.Pow(x, 2) - 1), 1 / 3);
-                Console.WriteLine(y);
+                y[i] = MyFunction(a, x[i]);
             }
         }
 
         public static void Main(string[] args)
         {
-            double[] xx = { 1.28, 1.36, 2.47, 3.68, 4.56 };
-            CourseApp.Program.Problem(1.6, 1.2, 3.7, 0.5);
-            CourseApp.Program.Problem2(xx, 1.6);
+            const double a = 1.6;
+            const double xn = 1.2;
+            const double xk = 3.7;
+            const double dx = 0.5;
+            Console.WriteLine("Task А:");
+            foreach (var item in TaskA(a, xn, xk, dx))
+            {
+                Console.WriteLine($"y = {item}");
+            }
+
+            Console.WriteLine("Task B:");
+            var x = new double[] { 1.28, 1.36, 2.47, 3.68, 4.56 };
+            foreach (var item in TaskB(a, x))
+            {
+                Console.WriteLine($"y = {item}");
+            }
+
+            Console.ReadLine();
         }
     }
 }
