@@ -25,11 +25,13 @@ namespace CourseApp
 
         public static double[] TaskB(double a, double[] x)
         {
-            Console.WriteLine("Second one.");
-            foreach (double x in elements)
+            var y = new double[x.Length];
+            for (var i = 0; i < x.Length; i++)
             {
                 y[i] = MyFunction(a, x[i]);
             }
+
+            return y;
         }
 
         public static void Main(string[] args)

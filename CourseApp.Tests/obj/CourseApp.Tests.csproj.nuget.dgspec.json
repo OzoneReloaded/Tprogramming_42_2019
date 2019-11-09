@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\CourseApp.Tests.csproj": {}
+    "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\CourseApp.Tests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\CourseApp.Tests.csproj": {
+    "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\CourseApp.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\CourseApp.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\CourseApp.Tests.csproj",
         "projectName": "CourseApp.Tests",
-        "projectPath": "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\CourseApp.Tests.csproj",
+        "projectPath": "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\CourseApp.Tests.csproj",
         "packagesPath": "C:\\Users\\Pilen\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\obj\\",
+        "outputPath": "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj": {
-                "projectPath": "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj"
+              "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj": {
+                "projectPath": "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj": {
+    "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj",
+        "projectUniqueName": "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj",
         "projectName": "CourseApp",
-        "projectPath": "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj",
+        "projectPath": "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\CourseApp.csproj",
         "packagesPath": "C:\\Users\\Pilen\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\obj\\",
+        "outputPath": "C:\\Users\\Pilen\\Desktop\\work\\Tprogramming_42_2019\\CourseApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
