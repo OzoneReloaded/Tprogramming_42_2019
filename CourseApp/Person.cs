@@ -5,6 +5,8 @@ namespace CourseApp
     public class Person
     {
         private int age;
+        private string name;
+        private string surname;
 
         public Person()
         : this(0, "Somename", "Somesurname", true)
@@ -19,9 +21,45 @@ namespace CourseApp
             IsMale = isMale;
         }
 
-        public string Name { get; set; }
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
 
-        public string Surname { get; set; }
+            set
+            {
+                if (value == string.Empty)
+                {
+                    Console.WriteLine("This field can't be empty.");
+                }
+                else
+                {
+                    this.name = value;
+                }
+            }
+        }
+
+        public string Surname
+        {
+            get
+            {
+                return this.surname;
+            }
+
+            set
+            {
+                if (value == string.Empty)
+                {
+                    Console.WriteLine("This field can't be empty.");
+                }
+                else
+                {
+                    this.surname = value;
+                }
+            }
+        }
 
         public bool IsMale { get; set; }
 
@@ -34,7 +72,7 @@ namespace CourseApp
 
             set
             {
-                if (value >= 0 && value < 20)
+                if (value >= 0 && value < 200)
                 {
                     this.age = value;
                 }
