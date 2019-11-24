@@ -47,5 +47,25 @@ namespace CourseApp.Tests
             item.Age = -1;
             Assert.Equal(27, item.Age);
         }
+
+        [Fact]
+        public void TestIncorrectSetString()
+        {
+            var item = new Person();
+            item.Name = string.Empty;
+            item.Surname = string.Empty;
+            Assert.Equal("Somename", item.Name);
+            Assert.Equal("Somesurname", item.Surname);
+        }
+
+        [Fact]
+        public void TestCorrectSetString()
+        {
+            var item = new Person();
+            item.Name = "im so tired";
+            item.Surname = "it is not a test it is a cry for help";
+            Assert.Equal("im so tired", item.Name);
+            Assert.Equal("it is not a test it is a cry for help", item.Surname);
+        }
     }
 }
