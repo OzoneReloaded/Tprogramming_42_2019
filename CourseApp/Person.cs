@@ -78,14 +78,14 @@ namespace CourseApp
                 }
                 else
                 {
-                    Console.WriteLine("Age should be > 0 and < than 20");
+                    throw new Exception("Age should be > 0 and < than 20");
                 }
             }
         }
 
-        public string View()
+        public override string ToString()
         {
-            return @"hello";
+            return "hello";
         }
     }
 }

@@ -19,8 +19,8 @@ namespace CourseApp.Tests
         public void TestView()
         {
             var item = new Person();
-            var view = @"hello";
-            Assert.Equal(view, item.View());
+            var view = "hello";
+            Assert.Equal(view, item.ToString());
         }
 
         [Fact]
@@ -35,8 +35,17 @@ namespace CourseApp.Tests
         public void TestIncorrectSetAge()
         {
             var item = new Person();
-            item.Age = -5;
-            Assert.Equal(0, item.Age);
+            try
+            {
+                item.Age = -5;
+            }
+            catch
+            {
+                Assert.Equal(0, item.Age);
+                return;
+            }
+
+            Assert.True(false);
         }
 
         [Fact]
@@ -44,7 +53,16 @@ namespace CourseApp.Tests
         {
             var item = new Person();
             item.Age = 27;
-            item.Age = -1;
+            try
+            {
+                item.Age = -1;
+            }
+            catch
+            {
+                Assert.Equal(27, item.Age);
+                return;
+            }
+
             Assert.Equal(27, item.Age);
         }
 
