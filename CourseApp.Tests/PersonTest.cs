@@ -70,10 +70,23 @@ namespace CourseApp.Tests
         public void TestIncorrectSetString()
         {
             var item = new Person();
-            item.Name = string.Empty;
-            item.Surname = string.Empty;
-            Assert.Equal("Somename", item.Name);
-            Assert.Equal("Somesurname", item.Surname);
+            try
+            {
+                item.Name = string.Empty;
+            }
+            catch (ArgumentNullException)
+            {
+                Assert.True(true);
+            }
+
+            try
+            {
+                item.Surname = string.Empty;
+            }
+            catch (ArgumentNullException)
+            {
+                Assert.True(true);
+            }
         }
 
         [Fact]
