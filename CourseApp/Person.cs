@@ -32,7 +32,7 @@ namespace CourseApp
             {
                 if (value == string.Empty)
                 {
-                    Console.WriteLine("This field can't be empty.");
+                    throw new ArgumentNullException("This field can't be empty.");
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace CourseApp
             {
                 if (value == string.Empty)
                 {
-                    Console.WriteLine("This field can't be empty.");
+                    throw new ArgumentNullException("This field can't be empty.");
                 }
                 else
                 {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CourseApp
 {
@@ -10,25 +11,23 @@ namespace CourseApp
             return y;
         }
 
-        public static double[] TaskA(double a, double xn, double xk, double dx)
+        public static List<double> TaskA(double a, double xn, double xk, double dx)
         {
-            int i = 0;
-            var y = new double[(int)((xk - xn) / dx)];
+            var y = new List<double>();
             for (double x = xn; x < xk; x += dx)
             {
-                y[i] = MyFunction(a, x);
-                i++;
+                y.Add(MyFunction(a, x));
             }
 
             return y;
         }
 
-        public static double[] TaskB(double a, double[] x)
+        public static List<double> TaskB(double a, List<double> x)
         {
-            var y = new double[x.Length];
-            for (var i = 0; i < x.Length; i++)
+            var y = new List<double>();
+            for (var i = 0; i < x.Count; i++)
             {
-                y[i] = MyFunction(a, x[i]);
+                y.Add(MyFunction(a, x[i]));
             }
 
             return y;
@@ -47,11 +46,13 @@ namespace CourseApp
             }
 
             Console.WriteLine("Task B:");
-            var x = new double[] { 1.28, 1.36, 2.47, 3.68, 4.56 };
+            List<double> x = new List<double> { 1.28, 1.36, 2.47, 3.68, 4.56 };
             foreach (var item in TaskB(a, x))
             {
                 Console.WriteLine($"y = {item}");
             }
+
+            Console.WriteLine(MyFunction(5, 6));
 
             Console.ReadLine();
         }

@@ -21,8 +21,8 @@ namespace CourseApp.Tests
         [Fact]
         public void TestMyFunctionNonZeros()
         {
-            var res = Program.MyFunction(0.0, 0.0);
-            Xunit.Assert.Equal(double.NaN, res);
+            var res = Program.MyFunction(5.0, 6.0);
+            Xunit.Assert.Equal(2.910, res, 3);
         }
 
         [Fact]
