@@ -2,12 +2,8 @@ using System;
 
 namespace CourseApp
 {
-    public class Person
+    public class Person : Humanoid
     {
-        private int age;
-        private string name;
-        private string surname;
-
         public Person()
         : this(0, "Somename", "Somesurname", true)
         {
@@ -21,66 +17,9 @@ namespace CourseApp
             IsMale = isMale;
         }
 
-        public string Name
+        public override void SayAnything()
         {
-            get
-            {
-                return this.name;
-            }
-
-            set
-            {
-                if (value == string.Empty)
-                {
-                    throw new ArgumentNullException("This field can't be empty.");
-                }
-                else
-                {
-                    this.name = value;
-                }
-            }
-        }
-
-        public string Surname
-        {
-            get
-            {
-                return this.surname;
-            }
-
-            set
-            {
-                if (value == string.Empty)
-                {
-                    throw new ArgumentNullException("This field can't be empty.");
-                }
-                else
-                {
-                    this.surname = value;
-                }
-            }
-        }
-
-        public bool IsMale { get; set; }
-
-        public int Age
-        {
-            get
-            {
-                return this.age;
-            }
-
-            set
-            {
-                if (value >= 0 && value < 200)
-                {
-                    this.age = value;
-                }
-                else
-                {
-                    throw new Exception("Age should be > 0 and < than 20");
-                }
-            }
+            Console.WriteLine($"{Name} {Surname}: -human english speech-");
         }
 
         public override string ToString()
